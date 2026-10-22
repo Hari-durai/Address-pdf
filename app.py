@@ -168,13 +168,10 @@ def build_pdf(rows):
         c.drawString(from_x, from_y, "FROM:")
         c.setFont(font_name, font_size_text)
         yy2 = from_y - 16
-        # Use bold for FROM text and center-align
-        bold_font = font_name + "-Bold" if font_name != "Helvetica" else "Helvetica-Bold"
-        c.setFont(bold_font, font_size_text)
-        # Split into lines and center each line horizontally within the column
+        # Center-align FROM text
         from_lines = from_text.replace("\r", "").split("\n")
         for line in from_lines:
-            line_width = c.stringWidth(line, bold_font, font_size_text)
+            line_width = c.stringWidth(line, font_name, font_size_text)
             x_centered = from_x + (col_w - 2 * pad_x - line_width) / 2
             if x_centered < from_x:
                 x_centered = from_x  # avoid overflow
