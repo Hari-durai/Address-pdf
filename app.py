@@ -164,7 +164,7 @@ def build_pdf(rows):
         # Left cell: FROM
         from_x = margin + pad_x
         from_y = y_top - pad_y
-        c.setFont(font_name, font_size_title)
+        c.setFont("Helvetica", font_size_title)
         c.drawString(from_x, from_y, "FROM:")
         c.setFont(font_name, font_size_text)
         yy2 = from_y - 16
@@ -181,7 +181,7 @@ def build_pdf(rows):
         # Right cell: TO
         to_x = margin + col_w + pad_x
         to_y = y_top - pad_y
-        c.setFont(font_name, font_size_title)
+        c.setFont("Helvetica", font_size_title)
         c.drawString(to_x, to_y, "TO: ")
         c.setFont(font_name, font_size_text)
         yy = to_y - 16
